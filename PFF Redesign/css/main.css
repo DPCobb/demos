@@ -1,0 +1,218 @@
+body{
+    max-width:2000px;
+    font-size:12pt;
+    background:#3a3d42;
+    font-family: 'Open Sans', sans-serif;
+}
+.button{
+    background:white;
+    border:none;
+    height:40px;
+}
+.set{
+    width:75%;
+}
+.container{
+    width:98%;
+}
+.centered{
+    margin:0 auto;
+}
+.white-popup {
+  position: relative;
+  background: #FFF;
+  padding: 20px;
+  width:auto;
+  max-width: 500px;
+  margin: 20px auto;
+}
+.round{
+    border-radius:10px;
+}
+a i, .social{
+    display:inline-block;
+    font-size:3em;
+    color:#dedfe0;
+    padding:2%;
+}
+/*----- HEADER Styles -----*/
+.logo{
+    width:10%;
+    display:inline-block;
+    padding:2%;
+    float:left;
+}
+
+header .social{
+    font-size:1em;
+    margin: 0 1%;
+    padding:0;
+}
+
+header h1 {
+    font-size:3em;
+    display:inline-block;
+    padding:2% 2% 0 2%;
+    margin-bottom:0;
+    color:#fff;
+    font-weight:800;
+}
+
+header h4{
+    display: inline-block;
+    padding:0 2%;
+    color:#bfc0c1;
+    font-weight:700;
+}
+/*----- NAV Styles -----*/
+nav{
+    background:#dedfe0;
+}
+nav ul{
+    text-align: center;
+    margin-bottom:0;
+}
+nav ul li{
+    list-style: none;
+    display:inline-block;
+    padding-right:2%;
+    margin:1%;
+}
+
+nav ul li a{
+    text-decoration: none;
+    font-weight:600;
+    color:#3a3d42;
+}
+/*----- CTA Styles -----*/
+.cta{
+    background:url('../images/background2.jpg') top center no-repeat;
+    background-size: cover;
+    height:800px;
+    text-align: center;
+}
+.cta h2{
+    font-size:3em;
+    color:#c4892f;
+    font-weight:800;
+    margin-top:10%;
+}
+.cta h5{
+    color:#dedfe0;
+    font-weight:800;
+}
+.cta .button{
+    margin-top:5%;
+}
+/*----- Location Explore, Featured Films -----*/
+.location-explore, .featured-films, .general-info{
+    margin-top:5%;
+    margin-bottom:5%;
+    color:#dedfe0;
+    text-align: center;
+}
+.location-explore h3, .featured-films h3, .general-info h3{
+    text-align: center;
+    font-weight:700;
+    margin-bottom:4%;
+}
+.location-highlight{
+    width:29%;
+    height:200px;
+    margin:2% 1%;
+    background:#dedfe0;
+    border-radius:10px;
+    color:#3a3d42;
+    display:inline-block;
+    overflow: hidden;
+    text-align: center;
+}
+.paramount{
+    background:url('../images/paramount.jpg');
+    background-size:100% 100%;
+}
+.field{
+    background:url('../images/field.jpg');
+    background-size:100% 100%;
+}
+.hvcca{
+    background:url('../images/hvcca.jpg');
+    background-size:100% 100%;
+}
+.loc{
+    margin-top:75px;
+    display:inline-block;
+    background:rgba(255,255,255,.9);
+    width:100%;
+    font-size:1em;
+    font-weight:800;
+    text-transform: uppercase;
+    padding:2%;
+}
+
+/*----- Films -----*/
+.film-img{
+    width:25%;
+    max-height:450px;
+    display:inline-block;
+    margin:2%;
+}
+.film-info{
+    width:60%;
+    padding:1%;
+    margin: 2% auto;
+    background:#bfc0c1;
+    color:#3a3d42;
+    text-align: left;
+    display:none;
+    font-size:1em;
+}
+
+.film-info > h4, .events > h4{
+    font-weight: 800;
+}
+.film-img:hover{
+    cursor: pointer;
+}
+
+/*----- General Info -----*/
+.general-info{
+    width:98%;
+    margin:10% auto;
+    text-align: left;
+}
+.events, .updates, .info{
+    width:90%;
+    padding:1%;
+    margin:0 auto;
+}
+.info{
+    text-align: center;
+}
+
+
+/*----- Presented By/Sponsors -----*/
+.presented-by{
+    text-align: center;
+    background:#dedfe0;
+    padding:2%;
+}
+.logo-img{
+    width:10%;
+    margin:0 auto;
+    padding:2%;
+}
+.logo-img:first-of-type{
+    width:25%;
+}
+.dc{
+    width:5%;
+}
+.presented-by h4, .presented-by h6{
+    font-weight:700;
+}
+
+/*----- Footer -----*/
+footer{
+    font-size:.75em;
+}
