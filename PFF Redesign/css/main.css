@@ -5,7 +5,7 @@ body{
     font-family: 'Open Sans', sans-serif;
 }
 .button{
-    background:white;
+    background:#fff;
     border:none;
     height:40px;
 }
@@ -35,11 +35,21 @@ a i, .social{
     color:#dedfe0;
     padding:2%;
 }
+
+.back-link{
+    font-size:.75em;
+    display: inline-block;
+    color:inherit;
+}
+
+table{
+    display:inline-block;
+}
 /*----- HEADER Styles -----*/
 .logo{
-    width:10%;
+    width:12%;
     display:inline-block;
-    padding:2%;
+    padding:1%;
     float:left;
 }
 
@@ -50,7 +60,7 @@ header .social{
 }
 
 header h1 {
-    font-size:3em;
+    font-size:2.5em;
     display:inline-block;
     padding:2% 2% 0 2%;
     margin-bottom:0;
@@ -58,7 +68,7 @@ header h1 {
     font-weight:800;
 }
 
-header h4{
+header h5{
     display: inline-block;
     padding:0 2%;
     color:#bfc0c1;
@@ -67,6 +77,7 @@ header h4{
 /*----- NAV Styles -----*/
 nav{
     background:#dedfe0;
+    overflow: hidden;
 }
 nav ul{
     text-align: center;
@@ -75,15 +86,66 @@ nav ul{
 nav ul li{
     list-style: none;
     display:inline-block;
-    padding-right:2%;
-    margin:1%;
+    /*padding-right:2%;
+    margin:1%;*/
+    margin-bottom:0;
 }
 
 nav ul li a{
     text-decoration: none;
     font-weight:600;
     color:#3a3d42;
+    width:100px;
+    padding:4%;
+    display:inline-block;
 }
+nav ul li a:hover{
+    background: linear-gradient(to bottom, #c4892f 0%,#bca98d 100%);
+    color:inherit;
+}
+
+nav ul li ul {
+    padding:0;
+    display:none;
+    visibility: hidden;
+    position:absolute;
+    /*left:0;*/
+    text-align: left;
+    line-height: 200%;
+
+}
+nav ul li ul li, nav ul li ul li a {
+    display: block;
+    position:relative;
+    width:96%;
+}
+nav ul li:hover ul{
+    /*position: absolute;*/
+    /*top:40px;
+    left:-25px;*/
+    display: block;
+    visibility: visible;
+    background-color: rgba(206,206,206,1.0);
+    width:200px;
+    min-height:30px;
+    max-height: 200px;
+    box-shadow: 5px 5px 5px 0 rgba(0,0,0,0.35);
+    margin-top:0;
+    margin-left:0;
+    text-decoration: none;
+    list-style: none;
+}
+nav li ul li{
+    list-style: none;
+    position: relative;
+    display:inline-block;
+    font-size: 12pt;
+}
+
+nav ul li ul li a:hover{
+    background: gray;
+}
+
 /*----- CTA Styles -----*/
 .cta{
     background:url('../images/background2.jpg') top center no-repeat;
@@ -111,7 +173,7 @@ nav ul li a{
     color:#dedfe0;
     text-align: center;
 }
-.location-explore h3, .featured-films h3, .general-info h3{
+.location-explore h3, .featured-films h3, .general-info h3, .location-wrap h4{
     text-align: center;
     font-weight:700;
     margin-bottom:4%;
@@ -148,6 +210,30 @@ nav ul li a{
     font-weight:800;
     text-transform: uppercase;
     padding:2%;
+}
+.location-wrap{
+    color:#dedfe0;
+    width:80%;
+    margin:5% auto;
+
+}
+.paramount-info, .field-info, .hvcca-info{
+    margin:20% auto;
+}
+.map-view{
+    float:right;
+    display:inline-block;
+    position:relative;
+    width:50%;
+}
+#map, #mapTwo, #mapThree{
+    width:98%;
+    margin:0 auto;
+    height:300px;
+    color:#3a3d42;
+}
+.loc-dir{
+    display:none;
 }
 
 /*----- Films -----*/
@@ -190,6 +276,10 @@ nav ul li a{
     text-align: center;
 }
 
+.info a{
+    margin:4% 0;
+}
+
 
 /*----- Presented By/Sponsors -----*/
 .presented-by{
@@ -215,4 +305,62 @@ nav ul li a{
 /*----- Footer -----*/
 footer{
     font-size:.75em;
+}
+
+/*----- MEDIA QUERRIES -----*/
+@media screen and (max-width:815px){
+    .set{
+        width:100%;
+    }
+}
+@media screen and (max-width:680px){
+    nav{
+        font-size:.8em;
+    }
+    nav ul li a{
+        width:75px;
+    }
+}
+@media screen and (max-width:635px){
+    .events, .updates, .info{
+        width:100%;
+    }
+    .location-highlight{
+        width:75%;
+    }
+}
+@media screen and (max-width:635px){
+    nav ul li a{
+        width:50px;
+    }
+    header{
+        text-align: center;
+    }
+    .logo{
+        width:50%;
+        float:none;
+    }
+    .cta{
+        height:500px;
+    }
+}
+@media screen and (max-width:355px){
+    .location-highlight{
+        width:98%;
+    }
+    .cta h2{
+        font-size: 2em;
+    }
+    .cta h5{
+        font-size: 1em;
+    }
+    .cta{
+        height:400px;
+    }
+    .film-img{
+        width:50%;
+    }
+    .film-info{
+        width:98%;
+    }
 }

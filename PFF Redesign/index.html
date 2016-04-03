@@ -19,7 +19,7 @@
             <div class="twelve columns">
                 <img src="images/pff.png" alt="Peekskill Film Festival Logo" class="logo">
                 <h1>Peekskill Film Festival</h1><br>
-                <h4>May 13-15</h4>
+                <h5>May 13-15</h5>
                 <a href="https://www.facebook.com/peekskillfilmfest" target="_blank" class="social"><i class="fa fa-facebook"></i></a>
                 <a href="https://twitter.com/PKfilmfest" target="_blank" class="social"><i class="fa fa-twitter"></i></a>
                 <a href="https://instagram.com/peekskillfilmfest/" target="_blank" class="social"><i class="fa fa-instagram"></i></a>
@@ -32,9 +32,18 @@
         <div class="row">
             <div class="twelve columns">
                 <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Festival</a></li>
-                    <li><a href="#">Info</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#">Festival</a>
+                        <ul>
+                            <li><a href="#">Test</a></li>
+                            <li><a href="#">Test</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Info</a>
+                        <ul>
+                            <li><a href="location.html">Location</a></li>
+                        </ul>
+                    </li>
                     <li><a href="#">Contact</a></li>
                     <li><a href="#">Submit</a></li>
                     <li><a href="#">Share</a></li>
@@ -163,35 +172,6 @@
 
     <!-- Image Gallery Script -->
     <script src="js/magnific.js"></script>
-    <script type="text/javascript">
-        $('.parent-container').magnificPopup({
-            delegate: 'a', // child items selector, by clicking on it popup will open
-            type: 'image',
-            // other options
-            gallery:{enabled:true}
-        });
-        $('.paramount').magnificPopup({
-            items: {
-                src: '<div class="white-popup">Location Specific Sched. and Info Shown here. With Link to full info page.</div>',
-                type: 'inline'
-            },
-            closeBtnInside: true
-        });
-        $('.field').magnificPopup({
-            items: {
-                src: '<div class="white-popup">Location Specific Sched. and Info Shown here. With Link to full info page.</div>',
-                type: 'inline'
-            },
-            closeBtnInside: true
-        });
-        $('.hvcca').magnificPopup({
-            items: {
-                src: '<div class="white-popup">Location Specific Sched. and Info Shown here. With Link to full info page.</div>',
-                type: 'inline'
-            },
-            closeBtnInside: true
-        });
-    </script>
-<script src="scripts/scripts.js"></script>
+    <script src="scripts/scripts.js"></script>
 </body>
 </html>
