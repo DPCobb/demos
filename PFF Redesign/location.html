@@ -195,7 +195,7 @@
                         </div>
                     </div>
                     <div class="hvcca-info" id="hvcca">
-                        <h4>The Hudson Valley Center for Contemporary Arts</h4>
+                        <h4>The Hudson Valley Center For Contemporary Art</h4>
                         <h2>Events</h2>
                         <table>
                             <thead>
@@ -315,15 +315,18 @@ var myCenter = {lat: 41.293344,lng: -73.906833}
 function initMap() {
   map = new google.maps.Map(document.getElementById('map'), {
     center: myLatLng,
-    zoom: 17
+    zoom: 17,
+    scrollwheel: false
 });
 var mapViewTwo = new google.maps.Map(document.getElementById('mapTwo'), {
   center: myLatLngtwo,
-  zoom: 17
+  zoom: 17,
+  scrollwheel: false
 });
 var mapViewThree = new google.maps.Map(document.getElementById('mapThree'), {
   center: myLatLngThree,
-  zoom: 17
+  zoom: 17,
+  scrollwheel: false
 });
 
 

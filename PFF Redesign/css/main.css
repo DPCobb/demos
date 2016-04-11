@@ -308,8 +308,19 @@ footer{
 }
 
 /*----- MEDIA QUERRIES -----*/
+@media screen and (max-width:900px){
+    .location-wrap{
+        width:98%;
+    }
+}
 @media screen and (max-width:815px){
     .set{
+        width:100%;
+    }
+}
+@media screen and (max-width:740px){
+    .map-view{
+        float:none;
         width:100%;
     }
 }
