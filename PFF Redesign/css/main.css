@@ -231,6 +231,18 @@ nav{
     padding:0;
     list-style:none;
 }
+.flyer{
+    width:30%;
+    display:inline-block;
+    float:left;
+    margin:2% auto;
+}
+.joinin{
+    width:50%;
+    display:inline-block;
+    float:left;
+    padding:2%;
+}
 
 
 /*----- CTA Styles -----*/
@@ -464,6 +476,13 @@ footer{
         width:90%;
     }
     .film-info{
+        width:90%;
+    }
+    .flyer{
+        display: none;
+    }
+    .joinin{
+        float:none;
         width:90%;
     }
 
