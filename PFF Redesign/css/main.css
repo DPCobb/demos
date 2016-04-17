@@ -18,6 +18,9 @@ body{
 .centered{
     margin:0 auto;
 }
+.textCenter{
+    text-align: center;
+}
 .white-popup {
   position: relative;
   background: #FFF;
@@ -44,6 +47,70 @@ a i, .social{
 
 table{
     display:inline-block;
+}
+
+.content{
+    width:90%;
+    margin:5% auto;
+    padding:5%;
+    color:#dedfe0;
+}
+.tickets{
+    margin:0 auto;
+    width:33%;
+    text-align: center;
+    padding:2%;
+}
+.hidden{
+    display:none;
+}
+.hidden h5{
+    font-weight: 700;
+}
+.more, .close{
+    margin-bottom:5%;
+}
+.schedHead h2, #full h2, #full h4{
+    color:#c4892f;
+}
+#gframe{
+    width:80%;
+    height:1000px;
+}
+.social-lg{
+    font-size: 2em;
+}
+.sponsorHL{
+    width:25%;
+    padding:2%;
+    height:300px;
+    display:inline-block;
+    border:1px solid #ececec;
+    background: #dedfe0;
+    border-radius:10px;
+    float:left;
+    text-align: center;
+    margin:2%;
+}
+.sponsorHL a{
+    color:#3a3d42;
+    width:100%;
+    height:100%;
+}
+.sponsorHL img{
+    width:50%;
+    margin:15% auto 5%;
+}
+.sponsorHL img.lrg{
+    width:100%;
+    margin:15% auto 5%;
+}
+.sponsorHL img.small{
+    width:40%;
+    margin:15% auto 5%;
+}
+#sponsorArea{
+    text-align: center;
 }
 /*----- HEADER Styles -----*/
 .logo{
@@ -194,7 +261,7 @@ nav ul li ul li a:hover{
     background-size:100% 100%;
 }
 .field{
-    background:url('../images/field.jpg');
+    background:url('../images/pcoffeeoutside.jpg');
     background-size:100% 100%;
 }
 .hvcca{
@@ -206,8 +273,8 @@ nav ul li ul li a:hover{
     display:inline-block;
     background:rgba(255,255,255,.9);
     width:100%;
-    font-size:1em;
-    font-weight:800;
+    font-size:.8em;
+    font-weight:700;
     text-transform: uppercase;
     padding:2%;
 }
@@ -216,6 +283,10 @@ nav ul li ul li a:hover{
     width:80%;
     margin:5% auto;
 
+}
+.location-wrap table{
+    width:50%;
+    font-size: .9em;
 }
 .paramount-info, .field-info, .hvcca-info{
     margin:20% auto;
@@ -322,6 +393,10 @@ footer{
     .map-view{
         float:none;
         width:100%;
+    }
+    .location-wrap table{
+        width:100%;
+        font-size: 1em;
     }
 }
 @media screen and (max-width:680px){

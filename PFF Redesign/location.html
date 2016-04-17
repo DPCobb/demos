@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Peekskill Film Festival</title>
+    <title>Peekskill Film Festival: Location</title>
     <link rel="stylesheet" href="css/magnific.css">
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <link rel="stylesheet" href="css/normalize.css">
@@ -65,7 +65,7 @@
                             <h6 class="loc">The Paramount Theater</h6>
                         </a>
                         <a href="#field" class="location-highlight field">
-                            <h6 class="loc">The Field Library</h6>
+                            <h6 class="loc">Peekskill Coffee House</h6>
                         </a>
                         <a href="#hvcca" class="location-highlight hvcca">
                             <h6 class="loc">Hudson Valley Center for Contemporary Art</h6>
@@ -91,16 +91,28 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>6:00 pm</td>
+                                    <td>8:00 pm</td>
                                     <td>May 13</td>
                                     <td>Screening</td>
-                                    <td>More info</td>
+                                    <td>Special Selection: But Not For Me</td>
                                 </tr>
                                 <tr>
-                                    <td>6:00 pm</td>
-                                    <td>May 13</td>
+                                    <td>12:00 pm</td>
+                                    <td>May 14</td>
+                                    <td>Workshop</td>
+                                    <td>Workshop with Impolite Company</td>
+                                </tr>
+                                <tr>
+                                    <td>2 - 6 pm</td>
+                                    <td>May 14</td>
                                     <td>Screening</td>
-                                    <td>More info</td>
+                                    <td>Screening of Official Selections</td>
+                                </tr>
+                                <tr>
+                                    <td>8:00 pm</td>
+                                    <td>May 14</td>
+                                    <td>Screening</td>
+                                    <td>Special Selection: La Jaula De Oro</td>
                                 </tr>
                             </tbody>
                         </table>
@@ -140,7 +152,7 @@
                         </div>
                     </div>
                     <div class="field-info" id="field">
-                        <h4>The Field Library</h4>
+                        <h4>Peekskill Coffee House</h4>
                         <h2>Events</h2>
                         <table>
                             <thead>
@@ -153,28 +165,22 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>6:00 pm</td>
-                                    <td>May 13</td>
+                                    <td>5:00 pm</td>
+                                    <td>May 15</td>
                                     <td>Screening</td>
-                                    <td>More info</td>
-                                </tr>
-                                <tr>
-                                    <td>6:00 pm</td>
-                                    <td>May 13</td>
-                                    <td>Screening</td>
-                                    <td>More info</td>
+                                    <td>Official Selection Screening</td>
                                 </tr>
                             </tbody>
                         </table>
                         <div class="map-view">
                             <div id="mapTwo"></div>
                         </div>
-                        <br><button class="button" id="field-dir">Directions</button>
+                        <!--<br><button class="button" id="field-dir">Directions</button>-->
                         <br><a href="#home" class="back-link">Home</a>
-                        <div class="row">
+                        <!--<div class="row">
                             <div class="twelve columns">
                                 <div class="loc-dir" id="fdirections">
-                                    <br>4 Nelson Ave
+                                    <br>101 South Division St.
                                     <br>Peekskill, NY
                                     <br>10566
                                     <hr>
@@ -192,7 +198,7 @@
                                         <br><a href="#field" class="back-link">Back to Top</a>
                                 </div>
                             </div>
-                        </div>
+                        </div>-->
                     </div>
                     <div class="hvcca-info" id="hvcca">
                         <h4>The Hudson Valley Center For Contemporary Art</h4>
@@ -208,16 +214,10 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>6:00 pm</td>
-                                    <td>May 13</td>
+                                    <td>12 - 4 pm</td>
+                                    <td>May 15</td>
                                     <td>Screening</td>
-                                    <td>More info</td>
-                                </tr>
-                                <tr>
-                                    <td>6:00 pm</td>
-                                    <td>May 13</td>
-                                    <td>Screening</td>
-                                    <td>More info</td>
+                                    <td>Screening of Official Selections</td>
                                 </tr>
                             </tbody>
                         </table>
@@ -309,7 +309,7 @@
 
 var map;
 var myLatLng = {lat: 41.28995,lng: -73.91965};
-var myLatLngtwo = {lat: 41.2910757,lng: -73.9225798};
+var myLatLngtwo = {lat: 41.2897769,lng: -73.9199731};
 var myLatLngThree = {lat: 41.293292,lng: -73.906799};
 var myCenter = {lat: 41.293344,lng: -73.906833}
 function initMap() {
@@ -338,7 +338,7 @@ var marker = new google.maps.Marker({
   var markerTwo = new google.maps.Marker({
       position: myLatLngtwo,
       map: mapViewTwo,
-      title: 'Peekskill Film Festival: The Field Library Theater'
+      title: 'Peekskill Film Festival: The Peekskill Coffee House'
     });
     var markerThree = new google.maps.Marker({
         position: myLatLngThree,
@@ -352,7 +352,7 @@ var marker = new google.maps.Marker({
    infowindow.open(map, marker);
  });
  var infowindowTwo = new google.maps.InfoWindow({
-   content: "<span style=\"font-weight:700;\">May 13-14 Peekskill Film Festival Location</span><hr> <p> The Field Library <br>4 Nelson Ave. <br> Peekskill, NY <br> 10566"
+   content: "<span style=\"font-weight:700;\">May 13-14 Peekskill Film Festival Location</span><hr> <p> The Peeksill Coffee House <br>101 S Division St. <br> Peekskill, NY <br> 10566"
  });
  markerTwo.addListener('click', function() {
   infowindowTwo.open(mapViewTwo, markerTwo);
