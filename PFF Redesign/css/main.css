@@ -119,6 +119,9 @@ table{
     padding:1%;
     float:left;
 }
+.logo:hover{
+    cursor: pointer;
+}
 
 header .social{
     font-size:1em;
@@ -142,76 +145,93 @@ header h5{
     font-weight:700;
 }
 /*----- NAV Styles -----*/
+
 nav{
     background:#dedfe0;
-    overflow: hidden;
+    padding-bottom:1px;
 }
-nav ul{
+.mobile{
+    display:none;
+}
+.navbar {
+    margin:0;
+    list-style:none;
+    width:100%;
     text-align: center;
-    margin-bottom:0;
-}
-nav ul li{
-    list-style: none;
-    display:inline-block;
-    /*padding-right:2%;
-    margin:1%;*/
-    margin-bottom:0;
 }
 
-nav ul li a{
+.navbar li {
+    display:inline-block;
+    width:10%;
+    position:relative;
+    margin-bottom:0;
+    z-index: 100;
+}
+
+.mobile li{
+    width:100%;
+    font-size:1em;
+    text-align: center;
+}
+
+.navbar li a {
+    background:#dedfe0;
     text-decoration: none;
     font-weight:600;
     color:#3a3d42;
-    width:100px;
-    padding:4%;
-    display:inline-block;
+    width:100%;
+    padding:5%;
+    display:block;
+    text-align:center;
+    text-transform:uppercase;
+    position: relative;
 }
-nav ul li a:hover{
-    background: linear-gradient(to bottom, #c4892f 0%,#bca98d 100%);
+.mobile li a{
+    color:#3a3d42;
+    width:100%;
+    padding:0;
+}
+
+.navbar ul {
+    position:absolute;
+    left:0;
+    display:none;
+    margin:0;
+    padding:0;
+    list-style:none;
+    width:100%;
+}
+
+.navbar ul li {
+    width:200px;
+    float:left;
+    border-top:none;
+}
+
+
+.navbar ul a {
+    display:block;
+    height:auto;
+    padding:2.5%;
+    color:#3a3d42;
+    text-decoration:none;
+    border-top:none;
+}
+
+.navbar ul a:hover, .navbar li a:hover {
+    background:linear-gradient(to bottom, #c4892f 0%,#bca98d 100%);
     color:inherit;
 }
 
-nav ul li ul {
-    padding:0;
-    display:none;
-    visibility: hidden;
+.navbar ul ul {
     position:absolute;
-    /*left:0;*/
-    text-align: left;
-    line-height: 200%;
-
-}
-nav ul li ul li, nav ul li ul li a {
-    display: block;
-    position:relative;
-    width:96%;
-}
-nav ul li:hover ul{
-    /*position: absolute;*/
-    /*top:40px;
-    left:-25px;*/
-    display: block;
-    visibility: visible;
-    background-color: rgba(206,206,206,1.0);
-    width:200px;
-    min-height:30px;
-    max-height: 200px;
-    box-shadow: 5px 5px 5px 0 rgba(0,0,0,0.35);
-    margin-top:0;
-    margin-left:0;
-    text-decoration: none;
-    list-style: none;
-}
-nav li ul li{
-    list-style: none;
-    position: relative;
-    display:inline-block;
-    font-size: 12pt;
+    left:100%;
+    top:0;
+    margin:0 0 0 -1px;
+    padding:0;
+    list-style:none;
 }
 
-nav ul li ul li a:hover{
-    background: gray;
-}
 
 /*----- CTA Styles -----*/
 .cta{
@@ -256,15 +276,15 @@ nav ul li ul li a:hover{
     overflow: hidden;
     text-align: center;
 }
-.paramount{
+.paramount, .paramountp{
     background:url('../images/paramount.jpg');
     background-size:100% 100%;
 }
-.field{
+.field, .fieldp{
     background:url('../images/pcoffeeoutside.jpg');
     background-size:100% 100%;
 }
-.hvcca{
+.hvcca, .hvccap{
     background:url('../images/hvcca.jpg');
     background-size:100% 100%;
 }
@@ -399,14 +419,56 @@ footer{
         font-size: 1em;
     }
 }
-@media screen and (max-width:680px){
-    nav{
-        font-size:.8em;
+@media screen and (max-width:750px){
+    .large{
+        display:none;
     }
-    nav ul li a{
-        width:75px;
+    .mobile{
+        display:block;
+        width:100%;
+        position: relative;
+        font-size: 1em;
+        text-align: center;
+        color:inherit;
     }
+    .mobile .threeline{
+        font-size: 2em;
+        padding:0;
+    }
+    .mobile .threeline:hover{
+        cursor: pointer;
+    }
+    ul li:hover ul{
+        display:block;
+        left: 0;
+        top: 100%;
+    }
+    ul.mobile li ul{
+        display: none;
+        position: relative;
+    }
+    ul.mobile > li{
+        width:100%;
+        position:relative;
+    }
+    ul.mobile ul li ul{
+        display:none;
+    }
+    .navbar ul li{
+        width:100%;
+    }
+    .cta{
+        height:500px;
+    }
+    .sponsorHL{
+        width:90%;
+    }
+    .film-info{
+        width:90%;
+    }
+
 }
+
 @media screen and (max-width:635px){
     .events, .updates, .info{
         width:100%;
@@ -416,9 +478,6 @@ footer{
     }
 }
 @media screen and (max-width:635px){
-    nav ul li a{
-        width:50px;
-    }
     header{
         text-align: center;
     }
