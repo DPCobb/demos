@@ -144,6 +144,7 @@
                 <div class="location-wrap">
                     <div class="paramount-info" id="paramount">
                         <h4>The Paramount Theater</h4>
+                        <h5>1008 Brown St, Peekskill NY 10566</h5>
                         <h2>Events</h2>
                         <table>
                             <thead>
@@ -185,6 +186,7 @@
                             <div id="map"></div>
                         </div>
                         <br><button class="button" id="paramount-dir">Directions</button>
+                        <a href="http://paramounthudsonvalley.com/" title="paramount theater link" class="button" target="_blank">Paramount Theater Website</a>
                         <br><a href="#home" class="back-link">Home</a>
                         <div class="row">
                             <div class="twelve columns">
@@ -218,6 +220,7 @@
                     </div>
                     <div class="field-info" id="field">
                         <h4>Peekskill Coffee House</h4>
+                        <h5>101 S. Division St, Peekskill NY 10566</h5>
                         <h2>Events</h2>
                         <table>
                             <thead>
@@ -240,11 +243,13 @@
                         <div class="map-view">
                             <div id="mapTwo"></div>
                         </div>
+                        <br><a href="http://www.peekskillcoffee.com/" title="peekskill coffee house link" class="button" target="_blank">Peekskill Coffee House Website</a>
                         <br><a href="#home" class="back-link">Home</a>
 
                     </div>
                     <div class="hvcca-info" id="hvcca">
                         <h4>The Hudson Valley Center For Contemporary Art</h4>
+                        <h5>1701 Main St, Peekskill NY 10566</h5>
                         <h2>Events</h2>
                         <table>
                             <thead>
@@ -268,6 +273,7 @@
                             <div id="mapThree"></div>
                         </div>
                         <br><button class="button" id="hvcca-dir">Directions</button>
+                        <a href="http://www.hvcca.org/" title="HVCCA link" class="button" target="_blank">HVCCA Website</a>
                         <br><a href="#home" class="back-link">Home</a>
                         <div class="row">
                             <div class="twelve columns">
@@ -394,19 +400,19 @@ var marker = new google.maps.Marker({
         title: 'Peekskill Film Festival: Hudson Valley Center for Contemporary Arts'
       });
   var infowindow = new google.maps.InfoWindow({
-    content: "<span style=\"font-weight:700;\">May 13-14 Peekskill Film Festival Location</span><hr> <p> The Paramount Theater <br>1008 Brown St. <br> Peekskill, NY <br> 10566"
+    content: "<span style=\"font-weight:700;\">May 13-15 Peekskill Film Festival Location</span><hr> <p> The Paramount Theater <br>1008 Brown St. <br> Peekskill, NY <br> 10566"
   });
   marker.addListener('click', function() {
    infowindow.open(map, marker);
  });
  var infowindowTwo = new google.maps.InfoWindow({
-   content: "<span style=\"font-weight:700;\">May 13-14 Peekskill Film Festival Location</span><hr> <p> The Peeksill Coffee House <br>101 S Division St. <br> Peekskill, NY <br> 10566"
+   content: "<span style=\"font-weight:700;\">May 13-15 Peekskill Film Festival Location</span><hr> <p> The Peeksill Coffee House <br>101 S Division St. <br> Peekskill, NY <br> 10566"
  });
  markerTwo.addListener('click', function() {
   infowindowTwo.open(mapViewTwo, markerTwo);
 });
 var infowindowThree = new google.maps.InfoWindow({
-  content: "<span style=\"font-weight:700;\">May 13-14 Peekskill Film Festival Location</span><hr> <p> Hudson Valley Center for Contemporary Arts <br>1701 Main St. <br> Peekskill, NY <br> 10566"
+  content: "<span style=\"font-weight:700;\">May 13-15 Peekskill Film Festival Location</span><hr> <p> Hudson Valley Center for Contemporary Arts <br>1701 Main St. <br> Peekskill, NY <br> 10566"
 });
 markerThree.addListener('click', function() {
  infowindowThree.open(mapViewThree, markerThree);

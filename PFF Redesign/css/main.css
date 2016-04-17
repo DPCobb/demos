@@ -237,6 +237,11 @@ nav{
     float:left;
     margin:2% auto;
 }
+.flyer-sm{
+    width:80%;
+    display:inline-block;
+    margin:3%;
+}
 .joinin{
     width:50%;
     display:inline-block;
@@ -272,10 +277,13 @@ nav{
     color:#dedfe0;
     text-align: center;
 }
-.location-explore h3, .featured-films h3, .general-info h3, .location-wrap h4{
+.location-explore h3, .featured-films h3, .general-info h3, .location-wrap h4, .location-wrap h5{
     text-align: center;
     font-weight:700;
     margin-bottom:4%;
+}
+.location-wrap h5{
+    font-weight: 500;
 }
 .location-highlight{
     width:29%;
