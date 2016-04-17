@@ -115,7 +115,7 @@ $(document).ready(function(){
         }
     });
     //Close small Nav if click outside of menu
-    $('.cta, .container').on('click',function(e){
+    $('.cta').on('click',function(e){
         e.preventDefault();
         //Slide up menu
         $('.mobile ul').slideUp();
