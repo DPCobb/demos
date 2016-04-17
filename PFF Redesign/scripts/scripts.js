@@ -178,7 +178,7 @@ $(document).ready(function(){
     var sponsorPrint = function(){
         $(sponsorList).each(function(i){
             var sponsor = $(sponsorList)[i];
-            $('#sponsorArea').append('<div class="sponsorHL"><a href="'+sponsor.web+'"><img src="images/'+sponsor.imageSrc+'" class="'+sponsor.class+'"/><p><h5>'+sponsor.name+'</h5></p></a></div>')
+            $('#sponsorArea').append('<div class="sponsorHL"><a href="'+sponsor.web+'" target="_blank"><img src="images/'+sponsor.imageSrc+'" class="'+sponsor.class+'"/><p><h5>'+sponsor.name+'</h5></p></a></div>')
         });
     };
     sponsorPrint();
