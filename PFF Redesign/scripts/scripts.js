@@ -1,27 +1,17 @@
 $(document).ready(function(){
-    $('#butnotforme-img').click(function(){
-        $('#butnotforme').slideToggle(function(){
-            if ($('#goldendream').is(':hidden')){
+    $('.film-img').click(function(){
+        var showId = $(this).attr('data-display');
+        var id = '#'+showId;
+        $(id).slideToggle(function(){
+            if ($(this).not(':hidden')){
+                $('.film-info').not(this).hide();
                 $('html, body').animate({
-                        scrollTop: $('#butnotforme').offset().top-200
+                        scrollTop: $(id).offset().top-200
                     }, 1000);
             }
             else{
-                $('#goldendream').hide()
-                $('#butnotforme').show()
-            }
-        })
-    });
-    $('#goldendream-img').click(function(){
-        $('#goldendream').slideToggle(function(){
-            if ($('#butnotforme').is(':hidden')){
-                $('html, body').animate({
-                        scrollTop: $('#goldendream').offset().top-200
-                    }, 1000);
-            }
-            else{
-                $('#butnotforme').hide()
-                $('#goldendream').show()
+                $('.film-info').hide();
+                $(id).show();
             }
         })
     });
@@ -33,21 +23,21 @@ $(document).ready(function(){
     });
     $('.paramountp').magnificPopup({
         items: {
-            src: '<div class="white-popup"><h4>The Paramount Theater</h4><h5>1008 Brown St, Peekskill NY 10566</h5><h5>Events</h5><table><thead><tr><th>Time</th><th>Date</th><th>Event</th><th>Info</th></tr></thead><tbody><tr><td>8:00 pm</td><td>May 13</td><td>Screening</td><td>Special Selection: But Not For Me</td></tr><tr><td>12:00 pm</td><td>May 14</td><td>Workshop</td><td>Workshop with Impolite Company</td></tr><tr><td>2 - 6 pm</td><td>May 14</td><td>Screening</td><td>Screening of Official Selections</td></tr><tr><td>8:00 pm</td><td>May 14</td><td>Screening</td><td>Special Selection: La Jaula De Oro</td></tr></tbody></table><a href="location.html#paramount" title="Location Info" target="_blank">More Info</a></div>',
+            src: '<div class="white-popup"><h4>The Paramount Theater</h4><h2>Events</h2><table><thead><tr><th>Time</th><th>Date</th><th>Event</th><th>Info</th></tr></thead><tbody><tr><td>8:00 pm</td><td>May 13</td><td>Screening</td><td>Special Selection: But Not For Me</td></tr><tr><td>12:00 pm</td><td>May 14</td><td>Workshop</td><td>Workshop with Impolite Company</td></tr><tr><td>2 - 6 pm</td><td>May 14</td><td>Screening</td><td>Screening of Official Selections</td></tr><tr><td>8:00 pm</td><td>May 14</td><td>Screening</td><td>Special Selection: La Jaula De Oro</td></tr></tbody></table><a href="location.html#paramount" title="Location Info" target="_blank">More Info</a></div>',
             type: 'inline'
         },
         closeBtnInside: true
     });
     $('.fieldp').magnificPopup({
         items: {
-            src: '<div class="white-popup"><h4>Peekskill Coffee House</h4><h5>101 S. Division St, Peekskill NY 10566</h5><h5>Events</h5><table><thead><tr><th>Time</th><th>Date</th><th>Event</th><th>Info</th></tr></thead><tbody><tr><td>5:00 pm</td><td>May 15</td><td>Screening</td><td>Official Selection Screening</td></tr></tbody></table><a href="location.html#field" title="Location Info" target="_blank">More Info</a></div>',
+            src: '<div class="white-popup"><h4>Peekskill Coffee House</h4><h2>Events</h2><table><thead><tr><th>Time</th><th>Date</th><th>Event</th><th>Info</th></tr></thead><tbody><tr><td>5:00 pm</td><td>May 15</td><td>Screening</td><td>Official Selection Screening</td></tr></tbody></table><a href="location.html#field" title="Location Info" target="_blank">More Info</a></div>',
             type: 'inline'
         },
         closeBtnInside: true
     });
     $('.hvccap').magnificPopup({
         items: {
-            src: '<div class="white-popup"><h4>The Hudson Valley Center For Contemporary Art</h4><h5>1701 Main St, Peekskill NY 10566</h5><h5>Events</h5><table><thead><tr><th>Time</th><th>Date</th><th>Event</th><th>Info</th></tr></thead><tbody><tr><td>12 - 4 pm</td><td>May 15</td><td>Screening</td><td>Screening of Official Selections</td></tr></tbody></table><a href="location.html#hvcca" title="Location Info" target="_blank">More Info</a></div>',
+            src: '<div class="white-popup"><h4>The Hudson Valley Center For Contemporary Art</h4><h2>Events</h2><table><thead><tr><th>Time</th><th>Date</th><th>Event</th><th>Info</th></tr></thead><tbody><tr><td>12 - 4 pm</td><td>May 15</td><td>Screening</td><td>Screening of Official Selections</td></tr></tbody></table><a href="location.html#hvcca" title="Location Info" target="_blank">More Info</a></div>',
             type: 'inline'
         },
         closeBtnInside: true
@@ -114,7 +104,18 @@ $(document).ready(function(){
             addClick();
         }
     });
-
+    //Close small Nav if click outside of menu
+    $('.cta').on('click',function(e){
+        e.preventDefault();
+        e.stopPropagation();
+        //Slide up menu
+        $('.mobile ul').slideUp();
+    });
+    $('.cta').find('a').on('click', function(e){
+        // Stops "discover how you can be a part" click from traveling up DOM to cta event and blocking
+        // page direct to join.html
+        e.stopPropagation();
+    });
 
     /*---------- Sponsor Info ----------*/
     var sponsorList = [
@@ -173,16 +174,42 @@ $(document).ready(function(){
             "web":"http://www.peekskillcoffee.com/",
             "imageSrc":"pcoffee.jpg",
             "class":"norm"
+        },{
+            "name":"Burger Diner",
+            "web":"http://burgerdinerpeekskill.com/",
+            "imageSrc":"burgerdiner.png",
+            "class":"norm"
+        },{
+            "name":"D. Bertoline & Sons",
+            "web":"http://www.dbertolineandsons.com/",
+            "imageSrc":"bertolini.jpg",
+            "class":"norm"
+        },{
+            "name":"The Coop Arts & Antiques",
+            "web":"none",
+            "imageSrc":"coop.png",
+            "class":"norm"
+        },{
+            "name":"Holiday Inn Express and Suites",
+            "web":"http://www.ihg.com/holidayinnexpress/hotels/us/en/peekskill/ftmcm/hoteldetail?cm_mmc=GoogleMaps-_-EX-_-USA-_-FTMCM",
+            "imageSrc":"holidayinn.png",
+            "class":"norm"
         }
     ];
     var sponsorPrint = function(){
         $(sponsorList).each(function(i){
             var sponsor = $(sponsorList)[i];
-            $('#sponsorArea').append('<div class="sponsorHL"><a href="'+sponsor.web+'" target="_blank"><img src="images/'+sponsor.imageSrc+'" class="'+sponsor.class+'"/><p><h5>'+sponsor.name+'</h5></p></a></div>')
+            if($(sponsorList)[i].web =="none"){
+                $('#sponsorArea').append('<div class="sponsorHL"><img src="images/'+sponsor.imageSrc+'" class="'+sponsor.class+'"/><p><h5>'+sponsor.name+'</h5></p></div>');
+            }
+            else{
+            $('#sponsorArea').append('<div class="sponsorHL"><a href="'+sponsor.web+'"><img src="images/'+sponsor.imageSrc+'" class="'+sponsor.class+'"/><p><h5>'+sponsor.name+'</h5></p></a></div>')
+            }
         });
     };
     sponsorPrint();
     $('.logo').on('click', function(){
         window.location = 'index.html';
     });
-})
+    $('.presented-by').load('footer.html');
+});
