@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bagger</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/main.js"></script>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body ng-app="myApp" ng-controller="listControl">
+    <section>
+        <h1>Bagger</h1>
+        <h2>Grocery lists made easy.</h2>
+        <p id="alertBox" class="alert"><span onclick="closeBox()">&times;</span>This Item is Already Listed!</p>
+        <form ng-model="formSub" name="formSub" ng-submit="addItem(formSub.$valid)" novalidate>
+            <input type="text" placeholder="Item name" id="item" name="item" ng-model="itemNew" autofocus required/>
+            <p ng-show="formSub.item.$invalid && formSub.item.$pristine" class="valid">Item Name is required!</p>
+            <select id="dept" name="dept" ng-model="deptNew" required>
+                <option value="" disabled selected>Select department</option>
+                <option ng-repeat="option in deptOpt" value={{option}}>{{option}}</option>
+            </select>
+            <p ng-show="formSub.dept.$invalid && formSub.dept.$pristine" class="valid">Department is required!</p>
+            <input type="submit" ng-disabled="formSub.$invalid"/>
+        </form>
+        <section class="sorting">
+            <h2>Sort By:</h2>
+            <label>
+              <input type="radio" ng-model="sortBy" name="direction" value="department" checked>
+              Deparment
+             </label>
+            <label>
+              <input type="radio" ng-model="sortBy" name="direction" value="item">
+              Item
+            </label>
+            <span ng-model="itemCount">Total Items: {{item.length}}</span>
+        </section>
+        <table>
+            <tr ng-repeat="item in item | orderBy:sortBy track by $index" data-code={{item.department}}>
+                <td>{{item.item}}</td>
+                <td>{{item.department}}</td>
+                <td><span ng-click="removeItem(item)">remove</span></td>
+            </tr>
+        </table>
+    </section>
+    <footer>
+        &copy; Daniel Cobb 2016
+    </footer>
+</body>
+</html>

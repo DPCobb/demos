@@ -1,0 +1,189 @@
+@import url(https://fonts.googleapis.com/css?family=Luckiest+Guy);
+body{
+    font:14pt/normal 'Helvetica', 'Arial', sans-serif;
+    background:#ECF0F1;
+}
+section{
+    width:90%;
+    padding:2%;
+    margin:0 auto;
+}
+section h1{
+    font-family: 'Luckiest Guy', cursive;
+    color:#336E7B;
+    font-size:3em;
+    margin:0 auto;
+}
+section h2{
+    margin-top:0;
+    font-size:1em;
+    color:#5C97BF;
+}
+
+table{
+    border-collapse: collapse;
+    width:90%;
+    font:14pt/normal 'Helvetica', 'Arial', sans-serif;
+    margin:0 auto 5%;
+}
+tr{
+    border-bottom:2px solid rgba(0,0,0,.1);
+    background:#ECECEC;
+}
+td{
+    width:calc(88% / 3);
+    padding:2%;
+}
+td span{
+    float: right;
+    font-size:.75em;
+    font-weight:800;
+    color:#fff;
+    background:#C0392B;
+    padding:10px 20px;
+    border-radius:3px;
+    border-right: 2px solid #96281B;
+    border-bottom: 2px solid #96281B;
+    transition-duration: 500ms;
+    text-transform: uppercase;
+}
+td span:hover, input[type="submit"]:hover{
+    cursor:pointer;
+    box-shadow:2px 3px 7px #B1B3B1;
+}
+form{
+    width:90%;
+    margin:0 auto;
+    clear:both;
+}
+label{
+    display:inline-block;
+    clear:right;
+    margin:0 3% 0 0;
+}
+.sorting{
+    clear:both;
+}
+.sorting span, .valid{
+    display:block;
+    margin:10px auto 0;
+    text-transform: uppercase;
+    font-size:.6em;
+    color:rgba(0,0,0,.5);
+}
+.valid{
+    margin:10px 4%;
+    text-transform: capitalize;
+}
+
+input[type="text"], select{
+    display:block;
+    width:90%;
+    border-radius:10px;
+    border:1px solid #B1B3B1;
+    outline:none;
+    padding:2%;
+    margin:2% auto;
+}
+select{
+    appearance:none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background:url('../images/down.png')98% 50% no-repeat, #fff;
+    width:95%;
+}
+select:hover{
+    cursor:pointer;
+}
+
+input[type="submit"]{
+    max-width:50%;
+    padding:10px 20px;
+    float:right;
+    margin:2% 3% 2% 0;
+    text-transform: uppercase;
+    border-radius:5px;
+    background:#26C281;
+    border:none;
+    border-right:2px solid #049372;
+    border-bottom:2px solid #049372;
+    color:#fff;
+    font-weight:700;
+    font-size:.75em;
+    transition-duration: 500ms;
+}
+input:focus{
+    outline:none;
+    border:2px solid #336E7B;
+}
+.alert{
+    width:90%;
+    padding:5% 2%;
+    margin:0 auto;
+    background:rgba(236,100,75, .5);
+    clear:both;
+    position:relative;
+    display:none;
+    border-radius:5px;
+    border-right: 2px solid rgba(236,100,75, .7);
+    border-bottom: 2px solid rgba(236,100,75, .7);
+    box-shadow:2px 3px 7px #B1B3B1;
+}
+.alert span{
+    position:absolute;
+    top:3%;
+    right:1%;
+    font-size:.75em;
+    font-weight:800;
+    color:#fff;
+    background:#C0392B;
+    padding:5px 10px;
+    border-radius:3px;
+    border-right: 2px solid #96281B;
+    border-bottom: 2px solid #96281B;
+    transition-duration: 500ms;
+    text-transform: uppercase;
+}
+.alert span:hover{
+    cursor:pointer;
+    box-shadow:2px 3px 7px #96281B;
+}
+footer{
+    text-align: center;
+    font-size:.6em;
+    color:rgba(0,0,0,.5);
+    padding:5%;
+    width:90%;
+}
+
+/*----- tr backgrounds based on department -----*/
+tr[data-code="Bakery"]{
+    background:rgba(143, 133, 163, .2);
+}tr[data-code="Dairy"]{
+    background:rgba(162, 222, 208, .2);
+}tr[data-code="Deli"]{
+    background:rgba(245, 215, 110, .2);
+}tr[data-code="Frozen"]{
+    background:rgba(244, 179, 80, .3);
+}tr[data-code="Grocery"]{
+    background:rgba(30, 139, 195, .2);
+}tr[data-code="Health and Beauty"]{
+    background:rgba(190, 144, 212, .4);
+}tr[data-code="Meat"]{
+    background:rgba(51, 110, 123, .2);
+}tr[data-code="Non Foods"]{
+    background:rgba(174, 168, 211, .2);
+}tr[data-code="Produce"]{
+    background:rgba(30, 130, 76, .2);
+}tr[data-code="Seafood"]{
+    background:rgba(211, 84, 0, .4);
+}tr[data-code="Other"]{
+    background:rgba(123,123,123, .6);
+}
+
+@media screen and (max-width:700px){
+    td span, input[type="submit"]{
+        font-size:.6em;
+        padding:5px 10px;
+    }
+}
