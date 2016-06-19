@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TaskLite</title>
+    <script src="https://use.fontawesome.com/415f9408ce.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+    <script src="js/lib/jquery-1.12.4.min.js"></script>
+    <script src="js/lib/angular-route.min.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/dataService.js"></script>
+    <script src="js/main.js"></script>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+
+</head>
+<body>
+    <header>
+        <h1>TaskLite</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#/tasks" alt="home"><i class="fa fa-home" aria-hidden="true"> HOME</i></a></li>
+            <li><a href="#/newtask" alt="New Task"><i class="fa fa-plus" aria-hidden="true"> ADD</i></a></li>
+        </ul>
+    </nav>
+    <div class="container" ng-view>
+
+    </div>
+    <footer>
+        &copy; Daniel Cobb 2016
+    </footer>
+</body>
+</html>
