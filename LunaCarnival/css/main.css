@@ -424,7 +424,7 @@ nav {
 @media screen and (max-width: 750px) {
   /* line 16, sass/_assets/_contact.scss */
   .contact p {
-    width: 95%;
+    width: 96%;
     padding: 2%;
     font-size: 1em;
   }
@@ -436,9 +436,15 @@ nav {
   padding: 0;
   text-indent: 0;
   font-size: 1.5em;
+  background: white;
+}
+/* line 35, sass/_assets/_contact.scss */
+.contact ul li {
+  margin: 0 auto;
+  padding: 0;
 }
 
-/* line 37, sass/_assets/_contact.scss */
+/* line 42, sass/_assets/_contact.scss */
 .contact h2 {
   font: 48pt/normal "Raleway", Arial, sans-serif;
   text-align: center;

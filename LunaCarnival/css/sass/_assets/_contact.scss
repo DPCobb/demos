@@ -20,7 +20,7 @@
         background:rgba(255,255,255,1);
         font-size:1.5em;
         @media screen and (max-width: 750px){
-            width:95%;
+            width:96%;
             padding:2%;
             font-size:1em;
         }
@@ -31,6 +31,11 @@
         padding:0;
         text-indent: 0;
         font-size:1.5em;
+        background:rgba(255,255,255,1);
+        li{
+            margin:0 auto;
+            padding:0;
+        }
     }
 }
 
