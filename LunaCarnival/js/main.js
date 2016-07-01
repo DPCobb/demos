@@ -50,9 +50,8 @@ $(document).ready(function(){
        }
    });
    //Close small Nav if click outside of menu
-   $('main').on('click',function(e){
-       e.preventDefault();
-       e.stopPropagation();
+   $('.mobile a').on('click',function(e){
+
        //Slide up menu
        $('.mobile ul').slideUp();
    });

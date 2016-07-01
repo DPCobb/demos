@@ -6,11 +6,12 @@
     height:800px;
     text-align: center;
     position: relative;
-    top:200px;
     @media screen and (max-width: 750px){
-        top:100px;
         height:500px;
         padding:30% 0 10%;
+    }
+    @media screen and (max-width: 350px){
+        padding:10% 0 0;
     }
 }
 

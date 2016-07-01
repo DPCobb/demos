@@ -17,10 +17,16 @@ h1{
         cursor: pointer;
     }
 }
-main{
-    height:1025px;
+header{
+    height:250px;
     @media screen and (max-width: 750px){
-        height:700px;
+        height:175px;
+    }
+}
+main{
+    height:auto;
+    @media screen and (max-width: 750px){
+        height:auto;
     }
 }
 .button{
@@ -46,6 +52,12 @@ img[alt="logo"]{
     width:15%;
     @media screen and (max-width: 750px){
         width:20%;
+    }
+    @media screen and (max-width: 420px){
+        width:30%;
+    }
+    @media screen and (max-width: 350px){
+        width:40%;
     }
 }
 
