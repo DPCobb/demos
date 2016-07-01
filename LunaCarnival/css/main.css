@@ -218,15 +218,14 @@ nav {
   position: relative;
   margin-bottom: 0;
   z-index: 100;
-  text-decoration: underline;
   text-transform: uppercase;
 }
-/* line 52, sass/_assets/_nav.scss */
+/* line 51, sass/_assets/_nav.scss */
 .navbar li:hover {
   cursor: pointer;
 }
 
-/* line 57, sass/_assets/_nav.scss */
+/* line 56, sass/_assets/_nav.scss */
 .mobile li {
   width: 100%;
   font-size: 1em;
@@ -234,12 +233,12 @@ nav {
   text-decoration: underline;
   text-transform: uppercase;
 }
-/* line 63, sass/_assets/_nav.scss */
+/* line 62, sass/_assets/_nav.scss */
 .mobile li:hover {
   cursor: pointer;
 }
 
-/* line 68, sass/_assets/_nav.scss */
+/* line 67, sass/_assets/_nav.scss */
 .navbar li a {
   background: white;
   text-decoration: none;
@@ -253,14 +252,14 @@ nav {
   position: relative;
 }
 
-/* line 80, sass/_assets/_nav.scss */
+/* line 79, sass/_assets/_nav.scss */
 .mobile li a {
   color: #2a3232;
   width: 100%;
   padding: 0;
 }
 
-/* line 86, sass/_assets/_nav.scss */
+/* line 85, sass/_assets/_nav.scss */
 .navbar ul {
   position: absolute;
   left: 0;
@@ -271,7 +270,7 @@ nav {
   width: 100%;
 }
 
-/* line 96, sass/_assets/_nav.scss */
+/* line 95, sass/_assets/_nav.scss */
 .navbar ul li {
   width: 200px;
   float: left;
@@ -279,7 +278,7 @@ nav {
   transition-duration: 500ms;
 }
 
-/* line 104, sass/_assets/_nav.scss */
+/* line 103, sass/_assets/_nav.scss */
 .navbar ul a {
   display: block;
   height: auto;
@@ -289,13 +288,13 @@ nav {
   border-top: none;
 }
 
-/* line 113, sass/_assets/_nav.scss */
+/* line 112, sass/_assets/_nav.scss */
 .navbar ul a:hover, .navbar li a:hover {
   border-bottom: 4px solid #2a3232;
   color: inherit;
 }
 
-/* line 118, sass/_assets/_nav.scss */
+/* line 117, sass/_assets/_nav.scss */
 .navbar ul ul {
   position: absolute;
   left: 100%;
@@ -306,7 +305,7 @@ nav {
 }
 
 @media screen and (max-width: 750px) {
-  /* line 127, sass/_assets/_nav.scss */
+  /* line 126, sass/_assets/_nav.scss */
   .mobile {
     display: block;
     width: 100%;
@@ -316,42 +315,42 @@ nav {
     color: inherit;
   }
 
-  /* line 135, sass/_assets/_nav.scss */
+  /* line 134, sass/_assets/_nav.scss */
   .mobile .threeline {
     font-size: 2em;
     padding: 0;
   }
 
-  /* line 139, sass/_assets/_nav.scss */
+  /* line 138, sass/_assets/_nav.scss */
   .mobile .threeline:hover {
     cursor: pointer;
   }
 
-  /* line 142, sass/_assets/_nav.scss */
+  /* line 141, sass/_assets/_nav.scss */
   ul li:hover ul {
     display: block;
     left: 0;
     top: 100%;
   }
 
-  /* line 147, sass/_assets/_nav.scss */
+  /* line 146, sass/_assets/_nav.scss */
   ul.mobile li ul {
     display: none;
     position: relative;
   }
 
-  /* line 151, sass/_assets/_nav.scss */
+  /* line 150, sass/_assets/_nav.scss */
   ul.mobile > li {
     width: 100%;
     position: relative;
   }
 
-  /* line 155, sass/_assets/_nav.scss */
+  /* line 154, sass/_assets/_nav.scss */
   ul.mobile ul li ul {
     display: none;
   }
 
-  /* line 158, sass/_assets/_nav.scss */
+  /* line 157, sass/_assets/_nav.scss */
   .navbar ul li {
     width: 100%;
   }
