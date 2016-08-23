@@ -1,0 +1,546 @@
+/* line 1, sass/_global.scss */
+body {
+  font: 12pt/normal "Open Sans", Arial, sans-serif;
+  color: #2a3232;
+  background: white;
+}
+
+/* line 6, sass/_global.scss */
+a {
+  color: inherit;
+}
+
+/* line 10, sass/_global.scss */
+h1 {
+  font: 32pt/normal "Raleway", Arial, sans-serif;
+  font-weight: 700;
+  display: block;
+  margin: 0;
+  text-align: center;
+}
+/* line 16, sass/_global.scss */
+h1:hover {
+  cursor: pointer;
+}
+
+/* line 20, sass/_global.scss */
+header {
+  height: 250px;
+}
+@media screen and (max-width: 750px) {
+  /* line 20, sass/_global.scss */
+  header {
+    height: 175px;
+  }
+}
+
+/* line 26, sass/_global.scss */
+main {
+  height: auto;
+}
+@media screen and (max-width: 750px) {
+  /* line 26, sass/_global.scss */
+  main {
+    height: auto;
+  }
+}
+
+/* line 32, sass/_global.scss */
+.button {
+  padding: 20px 50px;
+  background: #394445;
+  color: white;
+  border-radius: 5px;
+  margin: 5% auto;
+  display: inline-block;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1.2em;
+  border-right: 3px solid #2a3232;
+  border-bottom: 3px solid #2a3232;
+  transition-duration: 500ms;
+}
+/* line 45, sass/_global.scss */
+.button:hover {
+  background: #2a3232;
+  box-shadow: 1px 2px 5px #1a1f20;
+}
+
+/* line 51, sass/_global.scss */
+img[alt="logo"] {
+  width: 15%;
+}
+@media screen and (max-width: 750px) {
+  /* line 51, sass/_global.scss */
+  img[alt="logo"] {
+    width: 20%;
+  }
+}
+@media screen and (max-width: 420px) {
+  /* line 51, sass/_global.scss */
+  img[alt="logo"] {
+    width: 30%;
+  }
+}
+@media screen and (max-width: 350px) {
+  /* line 51, sass/_global.scss */
+  img[alt="logo"] {
+    width: 40%;
+  }
+}
+
+/* line 64, sass/_global.scss */
+footer {
+  width: 96%;
+  padding: 5% 2%;
+  background: #2a3232;
+  position: relative;
+  color: white;
+  text-align: center;
+  font-size: .75em;
+}
+
+/* line 73, sass/_global.scss */
+footer > span {
+  font-size: .75em;
+  display: block;
+}
+/* line 76, sass/_global.scss */
+footer > span::before {
+  display: table;
+  content: ' ';
+  clear: both;
+}
+
+/* line 82, sass/_global.scss */
+footer a {
+  color: inherit;
+}
+
+/* line 85, sass/_global.scss */
+footer section {
+  padding: 2%;
+  width: 29.33333%;
+  text-align: left;
+  display: inline-block;
+  height: 200px;
+  float: left;
+}
+@media screen and (max-width: 750px) {
+  /* line 85, sass/_global.scss */
+  footer section {
+    width: 95%;
+    display: block;
+    float: none;
+    height: auto;
+    text-align: center;
+  }
+}
+
+/* line 100, sass/_global.scss */
+footer ul, footer ul li {
+  padding: 0;
+  margin: 0;
+  text-indent: 0;
+  list-style: none;
+}
+
+/* line 106, sass/_global.scss */
+footer section:nth-of-type(2) ul li {
+  margin-bottom: 10px;
+}
+
+/* line 109, sass/_global.scss */
+footer .fa {
+  font-size: 1.5em;
+  padding: 2px;
+}
+
+/* line 1, sass/_assets/_nav.scss */
+nav {
+  background: white;
+  font-family: "Raleway", Arial, sans-serif;
+  padding: 5px 0 1px 0;
+  position: fixed;
+  z-index: 1;
+}
+
+/* line 8, sass/_assets/_nav.scss */
+.mobile {
+  display: none;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+/* line 13, sass/_assets/_nav.scss */
+.mobile li {
+  list-style: none;
+  padding: 10px 0;
+  margin: 0;
+  text-indent: none;
+  width: 100%;
+}
+/* line 20, sass/_assets/_nav.scss */
+.mobile li ul {
+  padding: 10px 0;
+  margin: 0;
+  text-indent: none;
+}
+@media screen and (max-width: 750px) {
+  /* line 8, sass/_assets/_nav.scss */
+  .mobile {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  /* line 29, sass/_assets/_nav.scss */
+  nav .large {
+    display: none;
+  }
+}
+
+/* line 34, sass/_assets/_nav.scss */
+.navbar {
+  margin: 0;
+  padding: 0 0 10px 0;
+  text-indent: 0;
+  list-style: none;
+  width: 100%;
+  text-align: center;
+  display: inline-block;
+}
+
+/* line 44, sass/_assets/_nav.scss */
+.navbar li {
+  display: inline-block;
+  width: 10%;
+  position: relative;
+  margin-bottom: 0;
+  z-index: 100;
+  text-transform: uppercase;
+}
+/* line 51, sass/_assets/_nav.scss */
+.navbar li:hover {
+  cursor: pointer;
+}
+
+/* line 56, sass/_assets/_nav.scss */
+.mobile li {
+  width: 100%;
+  font-size: 1em;
+  text-align: center;
+  text-decoration: underline;
+  text-transform: uppercase;
+}
+/* line 62, sass/_assets/_nav.scss */
+.mobile li:hover {
+  cursor: pointer;
+}
+
+/* line 67, sass/_assets/_nav.scss */
+.navbar li a {
+  background: white;
+  text-decoration: none;
+  font-weight: 400;
+  color: #2a3232;
+  width: 100%;
+  padding: 5%;
+  display: block;
+  text-align: center;
+  text-transform: uppercase;
+  position: relative;
+}
+
+/* line 79, sass/_assets/_nav.scss */
+.mobile li a {
+  color: #2a3232;
+  width: 100%;
+  padding: 0;
+}
+
+/* line 85, sass/_assets/_nav.scss */
+.navbar ul {
+  position: absolute;
+  left: 0;
+  display: none;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  width: 100%;
+}
+
+/* line 95, sass/_assets/_nav.scss */
+.navbar ul li {
+  width: 200px;
+  float: left;
+  border-top: none;
+  transition-duration: 500ms;
+}
+
+/* line 103, sass/_assets/_nav.scss */
+.navbar ul a {
+  display: block;
+  height: auto;
+  padding: 2.5%;
+  color: #2a3232;
+  text-decoration: none;
+  border-top: none;
+}
+
+/* line 112, sass/_assets/_nav.scss */
+.navbar ul a:hover, .navbar li a:hover {
+  border-bottom: 4px solid #2a3232;
+  color: inherit;
+}
+
+/* line 117, sass/_assets/_nav.scss */
+.navbar ul ul {
+  position: absolute;
+  left: 100%;
+  top: 0;
+  margin: 0 0 0 -1px;
+  padding: 0;
+  list-style: none;
+}
+
+@media screen and (max-width: 750px) {
+  /* line 126, sass/_assets/_nav.scss */
+  .mobile {
+    display: block;
+    width: 100%;
+    position: relative;
+    font-size: 1em;
+    text-align: center;
+    color: inherit;
+  }
+
+  /* line 134, sass/_assets/_nav.scss */
+  .mobile .threeline {
+    font-size: 2em;
+    padding: 0;
+  }
+
+  /* line 138, sass/_assets/_nav.scss */
+  .mobile .threeline:hover {
+    cursor: pointer;
+  }
+
+  /* line 141, sass/_assets/_nav.scss */
+  ul li:hover ul {
+    display: block;
+    left: 0;
+    top: 100%;
+  }
+
+  /* line 146, sass/_assets/_nav.scss */
+  ul.mobile li ul {
+    display: none;
+    position: relative;
+  }
+
+  /* line 150, sass/_assets/_nav.scss */
+  ul.mobile > li {
+    width: 100%;
+    position: relative;
+  }
+
+  /* line 154, sass/_assets/_nav.scss */
+  ul.mobile ul li ul {
+    display: none;
+  }
+
+  /* line 157, sass/_assets/_nav.scss */
+  .navbar ul li {
+    width: 100%;
+  }
+}
+/* line 1, sass/_assets/_home.scss */
+.home {
+  width: 100%;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.35) 0%, rgba(255, 255, 255, 0.35) 100%), url("../images/pizza.jpg") top center no-repeat;
+  background-size: cover;
+  padding: 20% 0 0;
+  height: 800px;
+  text-align: center;
+  position: relative;
+}
+@media screen and (max-width: 750px) {
+  /* line 1, sass/_assets/_home.scss */
+  .home {
+    height: 500px;
+    padding: 30% 0 10%;
+  }
+}
+@media screen and (max-width: 350px) {
+  /* line 1, sass/_assets/_home.scss */
+  .home {
+    padding: 10% 0 0;
+  }
+}
+
+/* line 18, sass/_assets/_home.scss */
+.home h2 {
+  font: 48pt/normal "Raleway", Arial, sans-serif;
+  text-align: center;
+  margin: 0 auto;
+}
+
+/* line 1, sass/_assets/_about.scss */
+.about {
+  width: 100%;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.35) 0%, rgba(255, 255, 255, 0.35) 100%), url("../images/about.jpg") top center no-repeat;
+  background-size: 80% 40%;
+  padding: 20% 0 0;
+  height: auto;
+  text-align: center;
+  position: relative;
+}
+@media screen and (max-width: 750px) {
+  /* line 1, sass/_assets/_about.scss */
+  .about {
+    height: auto;
+    padding: 30% 0 10%;
+    background-size: 100% 50%;
+  }
+}
+/* line 14, sass/_assets/_about.scss */
+.about p {
+  width: 50%;
+  padding: 2% 15%;
+  margin: 0 auto;
+  background: white;
+  font-size: 1.5em;
+}
+@media screen and (max-width: 750px) {
+  /* line 14, sass/_assets/_about.scss */
+  .about p {
+    width: 96%;
+    padding: 2%;
+    font-size: 1em;
+  }
+}
+
+/* line 28, sass/_assets/_about.scss */
+.about h2 {
+  font: 48pt/normal "Raleway", Arial, sans-serif;
+  text-align: center;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.75);
+}
+
+/* line 1, sass/_assets/_contact.scss */
+.contact {
+  width: 100%;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.35) 0%, rgba(255, 255, 255, 0.35) 100%), url("../images/about.jpg") top center no-repeat;
+  background-size: 80% 40%;
+  padding: 20% 0 0;
+  height: auto;
+  text-align: center;
+  position: relative;
+}
+@media screen and (max-width: 750px) {
+  /* line 1, sass/_assets/_contact.scss */
+  .contact {
+    height: auto;
+    padding: 30% 0 10%;
+    background-size: 100% 50%;
+  }
+}
+/* line 14, sass/_assets/_contact.scss */
+.contact p {
+  width: 50%;
+  padding: 2% 15%;
+  margin: 0 auto;
+  background: white;
+  font-size: 1.5em;
+}
+@media screen and (max-width: 750px) {
+  /* line 14, sass/_assets/_contact.scss */
+  .contact p {
+    width: 96%;
+    padding: 2%;
+    font-size: 1em;
+  }
+}
+/* line 26, sass/_assets/_contact.scss */
+.contact ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-indent: 0;
+  font-size: 1.5em;
+  background: white;
+}
+/* line 33, sass/_assets/_contact.scss */
+.contact ul li {
+  margin: 0 auto;
+  padding: 0;
+}
+
+/* line 40, sass/_assets/_contact.scss */
+.contact h2 {
+  font: 48pt/normal "Raleway", Arial, sans-serif;
+  text-align: center;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.75);
+}
+
+/* line 1, sass/_assets/_menu.scss */
+.menu {
+  width: 100%;
+  background-size: cover;
+  padding: 2% 0 0;
+  height: 1000px;
+  text-align: center;
+  position: relative;
+}
+@media screen and (max-width: 750px) {
+  /* line 1, sass/_assets/_menu.scss */
+  .menu {
+    height: auto;
+    padding: 10% 0 10%;
+  }
+}
+
+/* line 15, sass/_assets/_menu.scss */
+.menu h2 {
+  font: 48pt/normal "Raleway", Arial, sans-serif;
+  text-align: center;
+  margin: 0 auto;
+}
+
+/* line 21, sass/_assets/_menu.scss */
+table {
+  width: 50%;
+  padding: 2%;
+  margin: 5% auto;
+  border-collapse: collapse;
+  text-align: left;
+}
+@media screen and (max-width: 750px) {
+  /* line 21, sass/_assets/_menu.scss */
+  table {
+    width: 96%;
+    height: auto;
+    margin: 0 auto;
+  }
+}
+/* line 32, sass/_assets/_menu.scss */
+table tr {
+  padding: 2%;
+  width: 96%;
+}
+/* line 35, sass/_assets/_menu.scss */
+table tr:nth-of-type(odd) {
+  background: rgba(0, 0, 0, 0.1);
+}
+/* line 39, sass/_assets/_menu.scss */
+table td {
+  width: 46%;
+  padding: 2%;
+}
+/* line 42, sass/_assets/_menu.scss */
+table td:nth-of-type(even) {
+  text-align: right;
+}

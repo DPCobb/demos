@@ -1,0 +1,10 @@
+<p id="successUp"> Task Updated!</p>
+<form role="form" name="updateItem" ng-model="updateItem" ng-submit="updateTask()" novalidate="">
+    <input type='text' ng-model='updatename' name='updatename' required=""/>
+    <span ng-show="updateItem.updatename.$touched && updateItem.updatename.$invalid">Task Title required!</span>
+    <input type="text" ng-model="updatedatedue" name="updatedatedue" placeholder="Enter a date or time this needs to be done by" required=""/>
+    <span ng-show="updateItem.updatedatedue.$touched && updateItem.updatedatedue.$invalid">Task Deadline required!</span>
+    <textarea placeholder="Describe the task here!" ng-model="updatedesc" name="updatedesc" required=""></textarea>
+    <span ng-show="updateItem.updatedesc.$touched && updateItem.updatedesc.$invalid">Task Description required!</span>
+    <input type='submit' ng-disabled="updateItem.$invalid"/>
+</form>

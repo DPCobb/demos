@@ -1,0 +1,112 @@
+body{
+    font: $main-type-stack;
+    color: $main-type-color;
+    background: $main-background-color;
+}
+a{
+    color:inherit;
+}
+
+h1{
+    font: $h1-type-stack;
+    font-weight:700;
+    display:block;
+    margin:0;
+    text-align: center;
+    &:hover{
+        cursor: pointer;
+    }
+}
+header{
+    height:250px;
+    @media screen and (max-width: 750px){
+        height:175px;
+    }
+}
+main{
+    height:auto;
+    @media screen and (max-width: 750px){
+        height:auto;
+    }
+}
+.button{
+    padding:20px 50px;
+    background:#394445;
+    color:white;
+    border-radius: 5px;
+    margin:5% auto;
+    display:inline-block;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size:1.2em;
+    border-right: 3px solid #2a3232;
+    border-bottom: 3px solid #2a3232;
+    transition-duration: 500ms;
+    &:hover{
+        background:#2a3232;
+        box-shadow: 1px 2px 5px #1a1f20;
+    }
+}
+
+img[alt="logo"]{
+    width:15%;
+    @media screen and (max-width: 750px){
+        width:20%;
+    }
+    @media screen and (max-width: 420px){
+        width:30%;
+    }
+    @media screen and (max-width: 350px){
+        width:40%;
+    }
+}
+
+footer{
+    width:96%;
+    padding:5% 2%;
+    background: #2a3232;
+    position:relative;
+    color:white;
+    text-align: center;
+    font-size: .75em;
+}
+footer > span{
+    font-size:.75em;
+    display:block;
+    &::before{
+        display:table;
+        content:' ';
+        clear:both;
+    }
+}
+footer a{
+    color:inherit;
+}
+footer section{
+    padding: 2%;
+    width: (88%/3);
+    text-align: left;
+    display:inline-block;
+    height:200px;
+    float:left;
+    @media screen and (max-width: 750px){
+        width:95%;
+        display:block;
+        float:none;
+        height:auto;
+        text-align: center;
+    }
+}
+footer ul, footer ul li{
+    padding:0;
+    margin:0;
+    text-indent: 0;
+    list-style: none;
+}
+footer section:nth-of-type(2) ul li{
+    margin-bottom:10px;
+}
+footer .fa{
+    font-size: 1.5em;
+    padding:2px;
+}

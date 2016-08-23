@@ -1,0 +1,499 @@
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Daniel Cobb
+4-13-2016
+Project 2
+
+TOC
+
+-- General / Utility Classes
+    body
+    button
+    input
+-- Nav
+-- CTA
+-- Main Body
+    Value Statement
+    Main Content Properties
+    Table properties
+-- Modal
+-- Tooltip
+-- Tabs
+-- Image Slider
+-- Footer
+-- Media Querries
+    max 750px
+    max 450px
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+/*----- General / Utility Classes -----*/
+body{
+    font: 14pt/normal Helvetica, Arial, Sans-Serif;
+    padding:0;
+    margin:0 auto;
+    background:#d7dbdd;
+}
+.button{
+    text-decoration: none;
+    padding:1% 4%;
+    margin: 5% auto;
+    border-radius:10px;
+    color:#ececec;
+    background:#bc2c33;
+    text-align: center;
+    text-transform: uppercase;
+    box-shadow: 2px 3px 8px #412a1c;
+}
+.button:hover{
+    color:#1d221d;
+}
+
+input{
+    display:block;
+    border:none;
+    width:98%;
+    padding:2%;
+    margin:3% auto;
+    border-radius:5px;
+}
+
+
+/*----- Nav -----*/
+.small{
+    display:none;
+}
+.navbar {
+    margin:0;
+    padding:.25%;
+    list-style:none;
+    background:#1d221d;
+    width:100%;
+    position:fixed;
+    top:0;
+}
+
+.navbar li {
+    display:inline-block;
+    width:15%;
+    position:relative;
+}
+
+.small li{
+    width:30%;
+    font-size:.8em;
+}
+
+.navbar li a {
+    background:#1d221d;
+    color:#fff;
+    display:block;
+    padding:5%;
+    text-decoration:none;
+    text-align:center;
+    text-transform:uppercase;
+}
+.small li{
+    color:#fff;
+}
+
+.navbar ul {
+    position:absolute;
+    left:0;
+    display:none;
+    margin:0;
+    padding:0;
+    list-style:none;
+    width:100%;
+}
+
+.navbar ul li {
+    width:100%;
+    float:left;
+    border-top:none;
+}
+
+
+.navbar ul a {
+    display:block;
+    height:auto;
+    padding:2.5%;
+    color:#fff;
+    text-decoration:none;
+    border-top:none;
+}
+
+.navbar ul a:hover, .navbar li a:hover {
+    background:#b68669;
+    color:#ececec;
+}
+
+.navbar ul ul {
+    position:absolute;
+    left:100%;
+    top:0;
+    margin:0 0 0 -1px;
+    padding:0;
+    list-style:none;
+}
+
+/*----- CTA -----*/
+.cta{
+    width:100%;
+    padding:0;
+    margin:0 auto;
+    /* Overlay on Background Image to help text color show*/
+    background:linear-gradient(rgba(0,0,0,.4),rgba(0,0,0,.4)), url('../images/coffeeshop.jpg') top center no-repeat;
+    background-size:100% 100%;
+    height:800px;
+    text-align: center;
+}
+.cta h1{
+    font-family: 'Rock Salt', cursive;
+    font-size:3em;
+    margin:0 auto;
+    padding:5% 0 0;
+    color:#ececec;
+}
+
+.cta h3{
+    text-transform: uppercase;
+    margin-top:0;
+    color:#ececec;
+}
+
+.cta p{
+    margin:3% auto;
+    color:#ececec;
+    padding:2%;
+}
+
+/*----- Main Body -----*/
+.container{
+    width:100%;
+    margin:0 auto;
+}
+/* Value Statement properties */
+.valueWrap{
+    width:98%;
+    padding:1%;
+    text-align: center;
+    background:#492f24;
+    margin-top:0;
+    height:700px;
+    color:#ececec;
+}
+
+.valueImg{
+    width:30%;
+    margin:2% auto;
+    border-radius:20px;
+    color:#ececec;
+    display:inline-block;
+    height:250px;
+    overflow: hidden;
+    text-align: center;
+}
+.valueImg:hover{
+    cursor: pointer;
+}
+.valueImg p{
+    text-decoration: none;
+    color:inherit;
+    width:100%;
+    display:inline-block;
+    background:rgba(0,0,0,.5);
+    padding:2%;
+    font-size: 1.5em;
+    margin-top:25%;
+}
+.valueImg:first-of-type{
+    background:url('../images/coffe1.jpeg') top center no-repeat;
+    background-size: cover;
+}
+.valueImg:nth-of-type(2){
+    background:url('../images/coffee2.jpg') top center no-repeat;
+    background-size: cover;
+}
+.valueImg:nth-of-type(3){
+    background:url('../images/coffee3.jpg') top center no-repeat;
+    background-size: cover;
+}
+.valueInfo{
+    display:none;
+    width:50%;
+    background:#f6dcc0;
+    color:#1d221d;
+    padding:2%;
+    margin:0 auto;
+    border-radius:10px;
+}
+#fresh{
+    display:inline-block;
+}
+.valueInfo p{
+    margin-bottom:5%;
+}
+/* Main Content properties */
+.contentWrap{
+    width:90%;
+    padding:2%;
+    margin:0 auto;
+    height:400px;
+}
+table{
+    border-collapse: collapse;
+    width:60%;
+    text-align: center;
+}
+thead{
+    background:#1d221d;
+    color:#fff;
+    width:100%;
+}
+tbody tr td, thead tr td{
+    padding:2%;
+}
+tbody tr:nth-of-type(even){
+    background:#F0F4F5;
+    color:#1d221d;
+}
+
+/*----- Modal -----*/
+#overlay{
+    width:100%;
+    height:100%;
+    position:absolute;
+    top:0;
+    left:0;
+    z-index:1000;
+    display:none;
+    background:rgba(0,0,0,.5);
+}
+#modal{
+    width:40%;
+    background:#ececec;
+    border-radius:10px;
+    overflow:hidden;
+    position:relative;
+    top:20%;
+    left:26%;
+    z-index:1001;
+    display:none;
+    padding:2%;
+}
+
+#modal .close{
+    position:absolute;
+    right:5px;
+    top:5px;
+    font-size:1em;
+    padding:2%;
+    border-radius:60%;
+    text-align: center;
+    line-height: .25;
+}
+#modal .close:hover{
+    cursor: pointer;
+}
+
+/*----- Tool Tip -----*/
+.tooltip {
+	display:none;
+	position:absolute;
+	border:1px solid #333;
+	background-color:#161616;
+	border-radius:5px;
+	padding:2%;
+	color:#fff;
+    z-index: 2000;
+}
+
+/*----- Tabs -----*/
+.tabWrap{
+    margin:1%;
+    width:60%;
+    float:left;
+}
+.tabsNav{
+    margin:0;
+    padding:0;
+}
+.tabsNav li {
+	display:inline-block;
+    position: relative;
+    margin:0;
+    width:15%;
+    background: #1d221d;
+    padding:1%;
+    float:left;
+    text-align: center;
+}
+.tabsNav li a {
+	padding:1%;
+	display:block;
+	background:#1d221d;
+	color:#ececec;
+	text-decoration:none;
+    margin:0;
+    width:100%;
+}
+
+.tabsNav a.active {
+	background:#b68669;
+	color:#fff;
+}
+
+#tabs{
+    padding:2% 0;
+    color:#1d221d;
+    margin:0;
+    display: inline-block;
+    width:100%;
+}
+.tabsNav li.current, .tabsNav a.current{
+    background:#b68669;
+    color:#1d221d;
+}
+
+/*----- Image Slider -----*/
+.imgSlider{
+    width:35%;
+    padding:1%;
+    display:inline-block;
+    margin:2% auto;
+    float:right;
+    text-align: center;
+    border:1px dashed #000;
+    border-radius:10px;
+}
+.prev{
+    margin:0 5% 0 0;
+    font-size:3em;
+}
+.next{
+    margin:0 0 0 5%;
+    font-size:3em;
+}
+.prev:hover, .next:hover{
+    cursor: pointer;
+}
+.imgList, .imgList img{
+    width:96%;
+    padding:2%;
+    list-style: none;
+}
+
+.imgList li img{
+    display:none;
+    border-radius:20px;
+}
+.activeImg{
+    display:inline-block;
+}
+footer{
+    text-align: center;
+    font-size: .5em;
+    margin-top:10%;
+    width:100%;
+}
+
+
+/*----- Media Querries -----*/
+@media screen and (max-width:750px){
+
+    /* Activate Smaller Nav */
+    .small{
+        display:block;
+        width:100%;
+        position: relative;
+        font-size: 1em;
+    }
+    .small .threeline{
+        font-size: 2em;
+        padding:2%;
+    }
+    .small .threeline:hover{
+        cursor: pointer;
+    }
+    ul li:hover ul{
+        display:block;
+        left: 0;
+        top: 100%;
+    }
+    ul.small li ul{
+        display: none;
+        position: relative;
+    }
+    ul.small > li{
+        width:100%;
+        position:relative;
+    }
+    ul.small ul li ul{
+        display:none;
+    }
+    /*Turn off main Navbar*/
+    .large{
+        display:none;
+    }
+    /*CTA*/
+    .cta{
+        height:500px;
+    }
+    .cta h1{
+        font-size:2em;
+    }
+    /*Value Info*/
+    .valueInfo{
+        width:94%;
+    }
+    /*Tabs*/
+    .tabWrap{
+        float:none;
+        width:96%;
+    }
+    .tabsNav li{
+        width:25%;
+    }
+    table{
+        width:98%;
+    }
+    .contentWrap{
+        height:auto;
+    }
+    /*Image Slider*/
+    .imgSlider{
+        float:none;
+        width:96%;
+    }
+    #modal{
+        width:90%;
+        left:5%;
+    }
+}
+@media screen and (max-width:450px){
+    /*Value Image*/
+    .valueWrap{
+        height:900px;
+    }
+    .valueImg{
+        width:75%;
+        height:150px;
+    }
+    .valueWrap h2{
+        font-size: 1em;
+    }
+    /*CTA*/
+    .cta{
+        height:400px;
+    }
+    .cta h1{
+        font-size:1.5em;
+    }
+    /*Table*/
+    table, thead, tbody{
+        font-size: .9em;
+    }
+    .button{
+        font-size:.75em;
+    }
+}

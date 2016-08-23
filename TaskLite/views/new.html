@@ -1,0 +1,10 @@
+<p id="success"> New Task Added!</p>
+<form role="form" name="newItem" ng-model="newItem" ng-submit="newTask()" novalidate="">
+    <input type='text' ng-model='listname' name='listname' placeholder="Give your task a title" required=""/>
+    <span ng-show="newItem.listname.$touched && newItem.listname.$invalid">Task Title required!</span>
+    <input type="text" ng-model="datedue" name="datedue" placeholder="Enter a date or time this needs to be done by" required=""/>
+    <span ng-show="newItem.datedue.$touched && newItem.datedue.$invalid">Task Deadline required!</span>
+    <textarea placeholder="Describe the task here!" ng-model="desc" name="desc" required=""></textarea>
+    <span ng-show="newItem.desc.$touched && newItem.desc.$invalid">Task Description required!</span>
+    <input type='submit' ng-disabled="newItem.$invalid"/>
+</form>

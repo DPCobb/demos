@@ -1,0 +1,160 @@
+nav{
+    background:$nav-bg-color;
+    font-family: $nav-type-stack;
+    padding:5px 0 1px 0;
+    position: fixed;
+    z-index: 1;
+}
+.mobile{
+    display:none;
+    list-style: none;
+    margin:0;
+    padding:0;
+    li{
+        list-style: none;
+        padding:10px 0;
+        margin:0;
+        text-indent: none;
+        width:100%;
+    }
+    li ul{
+        padding:10px 0;
+        margin:0;
+        text-indent: none;
+    }
+    @media screen and (max-width:750px){
+        display:block;
+    }
+}
+nav .large{
+    @media screen and (max-width:750px){
+        display:none;
+    }
+}
+.navbar {
+    margin:0;
+    padding:0 0 10px 0;
+    text-indent: 0;
+    list-style:none;
+    width:100%;
+    text-align: center;
+    display:inline-block;
+}
+
+.navbar li {
+    display:inline-block;
+    width:10%;
+    position:relative;
+    margin-bottom:0;
+    z-index: 100;
+    text-transform: uppercase;
+    &:hover{
+        cursor: pointer;
+    }
+}
+
+.mobile li{
+    width:100%;
+    font-size:1em;
+    text-align: center;
+    text-decoration: underline;
+    text-transform: uppercase;
+    &:hover{
+        cursor: pointer;
+    }
+}
+
+.navbar li a {
+    background:$nav-bg-color;
+    text-decoration: none;
+    font-weight:400;
+    color:$nav-type-color;
+    width:100%;
+    padding:5%;
+    display:block;
+    text-align:center;
+    text-transform:uppercase;
+    position: relative;
+}
+.mobile li a{
+    color:$nav-type-color;
+    width:100%;
+    padding:0;
+}
+
+.navbar ul {
+    position:absolute;
+    left:0;
+    display:none;
+    margin:0;
+    padding:0;
+    list-style:none;
+    width:100%;
+}
+
+.navbar ul li {
+    width:200px;
+    float:left;
+    border-top:none;
+    transition-duration: 500ms;
+}
+
+
+.navbar ul a {
+    display:block;
+    height:auto;
+    padding:2.5%;
+    color:$nav-type-color;
+    text-decoration:none;
+    border-top:none;
+}
+
+.navbar ul a:hover, .navbar li a:hover {
+    border-bottom:4px solid #2a3232;
+    color:inherit;
+}
+
+.navbar ul ul {
+    position:absolute;
+    left:100%;
+    top:0;
+    margin:0 0 0 -1px;
+    padding:0;
+    list-style:none;
+}
+@media screen and (max-width:750px ){
+    .mobile{
+        display:block;
+        width:100%;
+        position: relative;
+        font-size: 1em;
+        text-align: center;
+        color:inherit;
+    }
+    .mobile .threeline{
+        font-size: 2em;
+        padding:0;
+    }
+    .mobile .threeline:hover{
+        cursor: pointer;
+    }
+    ul li:hover ul{
+        display:block;
+        left: 0;
+        top: 100%;
+    }
+    ul.mobile li ul{
+        display: none;
+        position: relative;
+    }
+    ul.mobile > li{
+        width:100%;
+        position:relative;
+    }
+    ul.mobile ul li ul{
+        display:none;
+    }
+    .navbar ul li{
+        width:100%;
+    }
+}

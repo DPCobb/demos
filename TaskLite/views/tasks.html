@@ -1,0 +1,14 @@
+<section>
+<h2>Current Tasks</h2>
+<div class="list">
+    <article ng-repeat="(key, task) in taskList">
+        <h3>{{ task.name }}</h3>
+        <h4>Due by: {{task.due}}</h4>
+        <p>{{task.desc}}</p>
+        <div>
+            <a href="#/update/{{key}}"><i class="fa fa-pencil" aria-hidden="true"> Update</i></a>
+            <button ng-click="remove(key)"><i class="fa fa-trash-o" aria-hidden="true"> Delete</i></button>
+        </div>
+    </article>
+</div>
+</section>
